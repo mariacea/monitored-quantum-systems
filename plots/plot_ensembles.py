@@ -23,8 +23,8 @@ def main():
         colors = get_colors(V)
         colors_soft = get_colors(V, alpha=0.3)
         marker = get_marker(V)
-        correlations_mean = np.load(f'figures_data/correlations_central_spins_V_{V:.3f}_num_sites_{20}.npy')
-        correlations_err = np.load(f'figures_data/errors_central_spins_V_{V:.3f}_num_sites_{20}.npy')
+        correlations_mean = np.load(f'figures/data/correlations_central_spins_V_{V:.3f}_num_sites_{20}.npy')
+        correlations_err = np.load(f'figures/data/errors_central_spins_V_{V:.3f}_num_sites_{20}.npy')
         ax.plot(x[::step], correlations_mean[::step], marker=marker, markersize=4.0, markeredgewidth=0.5, lw=0.0, markerfacecolor=colors_soft[-1], markeredgecolor=colors[-1])
         ax.errorbar(x[::step], correlations_mean[::step],yerr=correlations_err[::step], fmt='none', capsize=3.0, linewidth=1, capthick=0.5, color=colors[-1], zorder=1)
 
@@ -40,7 +40,7 @@ def main():
 
     fig, ax = create_figure(8.0, 5.5, margin_cm=2.0)
 
-    with open("figures_data/activity_histogram_data.json") as f:
+    with open("figures/data/activity_histogram_data.json") as f:
         data = json.load(f)
 
     num_bins = data["num_bins_default"]

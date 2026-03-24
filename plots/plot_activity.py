@@ -18,7 +18,7 @@ def main():
     ax.axhline(y=0, color='grey', linewidth=1, linestyle='--')
     ax.axvline(x=0, color='grey', linewidth=1, linestyle='--')
 
-    with open('figures_data/activity_data.json', 'r') as f:
+    with open('figures/data/activity_data.json', 'r') as f:
         data = json.load(f)
 
     s_range = np.linspace(-0.01, 0.01, 21)

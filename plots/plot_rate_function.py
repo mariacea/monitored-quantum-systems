@@ -16,30 +16,25 @@ def main():
 
     fig, ax = create_figure(5.0, 5.5, margin_cm=2.0)
 
-    ax.axhline(0, color='grey', linewidth=1, linestyle='--')
-    ax.axvline(0, color='grey', linewidth=1, linestyle='--')
-
-    with open('figures_data/SCGF_data.json', 'r') as f:
+    with open("figures/data/rate_function_data.json", "r") as f:
         data = json.load(f)
 
-    s_range = np.linspace(-0.01, 0.01, 21)
     num_sites_range = np.array([4, 6, 8, 10, 20, 40, 60])
     V_values = np.array([5.875, 2.0])
 
     for n, L in enumerate(num_sites_range):
         for V in V_values:
-            SCGF_large_values = data[f"SCGF_V_{V}_L_{L}_large"]
-            SCGF_small_values = data[f"SCGF_V_{V}_L_{L}_small" ]
+            activity_values = data[f"activity_V_{V}_L_{L}"]
+            phi_values = data[f"phi_V_{V}_L_{L}"]
+            error_values = data[f"errors_V_{V}_L_{L}"]
             colors = get_colors(V)
             colors_soft = get_colors(V, alpha=0.3)
             marker = get_marker(V)
-            errors = [abs(lv - sv) for lv, sv in zip(SCGF_large_values, SCGF_small_values)]
-            ax.plot(s_range, SCGF_large_values, marker=marker, markersize=4, markeredgewidth=0.5, ls=':', lw=0.8, c=colors[n], markerfacecolor=colors_soft[n], markeredgecolor=colors[n])
-            ax.errorbar(s_range, SCGF_large_values, yerr=errors, linestyle='None', capsize=3, elinewidth=1, zorder=1, capthick=0.5, lw=0.5, c=colors[n])
+            ax.plot(activity_values, phi_values, marker=marker, markersize=4.5, markeredgewidth=0.5, lw=0.5, c=colors[n], markerfacecolor=colors_soft[n], markeredgecolor=colors[n])
+            ax.errorbar(activity_values, phi_values, yerr=error_values, linestyle='None', capsize=3, elinewidth=1, zorder=1, c=colors[n])
 
-    ax.set_xlabel(r"$s$", fontsize=17)
-    ax.set_ylabel(r"$\theta(s)$", fontsize=17)
-    ax.set_xticks([-0.01, 0.0, 0.01])
+    ax.set_xlabel(r"$a$", fontsize=17)
+    ax.set_ylabel(r"$-\phi(a)$", fontsize=17)
     ax.tick_params(axis='x', labelsize=17)
     ax.tick_params(axis='y', labelsize=17)
 
@@ -48,7 +43,7 @@ def main():
     ax.yaxis.set_major_formatter(sf)
     ax.yaxis.offsetText.set_fontsize(17)
 
-    plt.savefig('figures/fig3_a.pdf', dpi=300, transparent=True)
+    plt.savefig("figures/fig3_c.pdf", dpi=300, transparent=True)
 
     plt.close(fig)
 

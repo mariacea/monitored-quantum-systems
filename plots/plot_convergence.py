@@ -44,7 +44,7 @@ def main():
 
     os.makedirs("figures", exist_ok=True)
 
-    with open('figures_data/convergence_data.json', 'r') as f:
+    with open('figures/data/convergence_data.json', 'r') as f:
         data = json.load(f)
 
     for s, V, name in cases:

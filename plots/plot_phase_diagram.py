@@ -14,7 +14,7 @@ def main():
 
     fig = plt.figure(figsize=(5.4, 6.54))
 
-    with open('figures_data/phase_diagram_data.json', 'r') as f:
+    with open('figures/data/phase_diagram_data.json', 'r') as f:
         data = json.load(f)
 
     V_values = np.array(data["phase_diagram"]["V_values"])

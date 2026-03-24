@@ -94,10 +94,10 @@ def main():
 
     os.makedirs("figures", exist_ok=True)
 
-    with open('figures_data/SCGF_positive_data.json', 'r') as f:
+    with open('figures/data/SCGF_positive_data.json', 'r') as f:
         data = json.load(f)
 
-    with open('figures_data/activity_data.json', 'r') as f:
+    with open('figures/data/activity_data.json', 'r') as f:
         activity_data = json.load(f)
 
     num_sites_range = np.array([20, 40, 60])
