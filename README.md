@@ -25,7 +25,7 @@ The repository includes both the core tensor network infrastructure (MPS, MPO, M
 
 * `src/` – Core tensor network code and simulation routines
 * `scripts/` – Scripts to generate figures
-* `figures/` – Output figures (PDF)
+* `figures/` – Output figures (PDF) + figures data
 
 ---
 
@@ -51,9 +51,9 @@ pip install -r requirements.txt
 The main datasets used in the paper are generated using:
 
 ```bash
-python -m scripts.main
-python -m scripts.compute_activity
-python -m scripts.2d_sampling
+python -m src.main
+python -m src.compute_activity
+python -m src.2d_sampling
 ```
 For advanced usage, the core simulation module can be run directly with custom parameters.
 
@@ -61,8 +61,8 @@ To see all available options:
 
 ```bash
 python -m src.main --help
-python -m scripts.compute_activity --help
-python -m scripts.2d_sampling --help
+python -m src.compute_activity --help
+python -m src.2d_sampling --help
 ```
 
 Example minimal run:
@@ -74,7 +74,7 @@ python -m src.main --num_sites 4 --V 5.6 --s 0.0 --max_bond_dim 5 --max_iteratio
 
 ## 📊 Reproducing figures
 
-Figures from the paper can be reproduced using the plotting scripts in `scripts/`:
+Figures from the paper can be reproduced using the plotting scripts in `plots/`:
 
 * Fig. 1 → `plot_phase_diagram.py`
 * Fig. 3 → `plot_SCGF.py`, `plot_activity.py`, `plot_rate_function.py`, `plot_critical_s.py`
@@ -85,7 +85,7 @@ Figures from the paper can be reproduced using the plotting scripts in `scripts/
 Example:
 
 ```bash
-python -m scripts.plot_SCGF
+python -m plots.run_all
 ```
 
 ---
@@ -94,7 +94,7 @@ python -m scripts.plot_SCGF
 
 * Simulations can be computationally demanding depending on system size and bond dimension
 * Some scripts rely on stochastic sampling; results may vary slightly between runs
-* Precomputed data used in the figures of the paper are provided in `figures_data/` for convenience and reproducibility
+* Precomputed data used in the figures of the paper are provided in `figures/data/` for convenience and reproducibility
 * All datasets can be regenerated from scratch using the scripts in `scr/`, ensuring full reproducibility of the results
 
 ---
