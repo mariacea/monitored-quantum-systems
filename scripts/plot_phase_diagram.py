@@ -10,8 +10,7 @@ from plot_helper import create_strong_shading
 def main():
     set_plot_style()
 
-    os.makedirs("figures/svg", exist_ok=True)
-    os.makedirs("figures/pdf", exist_ok=True)
+    os.makedirs("figures", exist_ok=True)
 
     fig = plt.figure(figsize=(5.4, 6.54))
 
@@ -67,8 +66,7 @@ def main():
     plt.ticklabel_format(style='sci', axis='x', scilimits=(0,0))
     plt.gca().xaxis.get_offset_text().set_fontsize(25)
 
-    plt.savefig('figures/svg/fig1_c.svg', bbox_inches='tight', dpi=300, transparent=True)
-    plt.savefig('figures/pdf/fig1_c.pdf', bbox_inches='tight', dpi=300, transparent=True)
+    plt.savefig('figures/fig1_c.pdf', bbox_inches='tight', dpi=300, transparent=True)
 
     plt.close(fig)
 

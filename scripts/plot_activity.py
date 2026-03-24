@@ -11,8 +11,7 @@ from plot_config import get_colors, get_marker
 def main():
     set_plot_style()
 
-    os.makedirs("figures/svg", exist_ok=True)
-    os.makedirs("figures/pdf", exist_ok=True)
+    os.makedirs("figures", exist_ok=True)
 
     fig, ax = create_figure(5.0, 5.5, margin_cm=2.0)
 
@@ -48,8 +47,7 @@ def main():
     ax.tick_params(axis='x', labelsize=17)
     ax.tick_params(axis='y', labelsize=17)
 
-    plt.savefig('figures/svg/fig3_b.svg', dpi=300, transparent=True)
-    plt.savefig('figures/pdf/fig3_b.pdf', dpi=300, transparent=True)
+    plt.savefig('figures/fig3_b.pdf', dpi=300, transparent=True)
 
     plt.close(fig)
 

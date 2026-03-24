@@ -12,8 +12,7 @@ from src.plot_style import set_plot_style
 def main():
     set_plot_style()
 
-    os.makedirs("figures/svg", exist_ok=True)
-    os.makedirs("figures/pdf", exist_ok=True)
+    os.makedirs("figures", exist_ok=True)
 
     fig, ax = create_figure(5.0, 5.5, margin_cm=2.0)
 
@@ -49,8 +48,7 @@ def main():
     ax.yaxis.set_major_formatter(sf)
     ax.yaxis.offsetText.set_fontsize(17)
 
-    plt.savefig('figures/svg/fig3_a.svg', dpi=300, transparent=True)
-    plt.savefig('figures/pdf/fig3_a.pdf', dpi=300, transparent=True)
+    plt.savefig('figures/fig3_a.pdf', dpi=300, transparent=True)
 
     plt.close(fig)
 

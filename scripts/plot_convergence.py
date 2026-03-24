@@ -33,8 +33,7 @@ def plot_convergence(data, s, V, name):
     ax.yaxis.set_major_formatter(sf)
     ax.yaxis.offsetText.set_fontsize(13)
 
-    plt.savefig(f'figures/svg/{name}.svg', bbox_inches='tight', dpi=300, transparent=True)
-    plt.savefig(f'figures/pdf/{name}.pdf', bbox_inches='tight', dpi=300, transparent=True)
+    plt.savefig(f'figures/{name}.pdf', bbox_inches='tight', dpi=300, transparent=True)
 
     plt.close(fig)
 
@@ -43,8 +42,7 @@ cases = [(-0.01, 5.875, "figs2_a"), ( 0.001, 5.875, "figs2_b"), ( 0.01, 5.875, "
 def main():
     set_plot_style()
 
-    os.makedirs("figures/svg", exist_ok=True)
-    os.makedirs("figures/pdf", exist_ok=True)
+    os.makedirs("figures", exist_ok=True)
 
     with open('figures_data/convergence_data.json', 'r') as f:
         data = json.load(f)

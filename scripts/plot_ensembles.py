@@ -11,8 +11,7 @@ from plot_config import get_colors, get_marker
 def main():
     set_plot_style()
 
-    os.makedirs("figures/svg", exist_ok=True)
-    os.makedirs("figures/pdf", exist_ok=True)
+    os.makedirs("figures", exist_ok=True)
 
     fig, ax = create_figure(8.0, 5.5, margin_cm=2.0)
 
@@ -35,8 +34,7 @@ def main():
     ax.tick_params(axis='y', labelsize=20)
     ax.set_yscale("log")
     ax.set_ylim(bottom=1e-3/2, top=1e-1*8)
-    plt.savefig("figures/svg/fig4_a.svg", dpi=300, transparent=True)
-    plt.savefig("figures/pdf/fig4_a.pdf", dpi=300, transparent=True)
+    plt.savefig("figures/fig4_a.pdf", dpi=300, transparent=True)
 
     plt.close(fig)
 
@@ -70,8 +68,7 @@ def main():
     plt.xticks([0.2, 0.4, 0.6], fontsize=20)
     plt.yticks([0, 5, 10], fontsize=20)
 
-    plt.savefig("figures/svg/fig4_b.svg", dpi=300, transparent=True)
-    plt.savefig("figures/pdf/fig4_b.pdf", dpi=300, transparent=True)
+    plt.savefig("figures/fig4_b.pdf", dpi=300, transparent=True)
 
 
 if __name__ == "__main__":

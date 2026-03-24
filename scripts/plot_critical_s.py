@@ -92,8 +92,7 @@ def main():
 
     set_plot_style()
 
-    os.makedirs("figures/svg", exist_ok=True)
-    os.makedirs("figures/pdf", exist_ok=True)
+    os.makedirs("figures", exist_ok=True)
 
     with open('figures_data/SCGF_positive_data.json', 'r') as f:
         data = json.load(f)
@@ -140,8 +139,7 @@ def main():
 
     format_axes(ax)
 
-    plt.savefig('figures/svg/fig3_d.svg', dpi=300, transparent=True)
-    plt.savefig('figures/pdf/fig3_d.pdf', dpi=300, transparent=True)
+    plt.savefig('figures/fig3_d.pdf', dpi=300, transparent=True)
     plt.close(fig)
 
     # ---- fig3_e
@@ -151,8 +149,7 @@ def main():
 
     plot_scgf_cross(ax, data, 5.875, num_sites_range, colors, colors_soft, marker_map, fit_indices=(0, 1), a0=a0_activity)
 
-    plt.savefig('figures/svg/fig3_e.svg', dpi=300, transparent=True)
-    plt.savefig('figures/pdf/fig3_e.pdf', dpi=300, transparent=True)
+    plt.savefig('figures/fig3_e.pdf', dpi=300, transparent=True)
     plt.close(fig)
 
     # ---- fig3_e_inset
@@ -164,8 +161,7 @@ def main():
 
     plot_inset(ax, x, y, sigma, num_sites_range, colors, colors_soft, marker_map)
 
-    plt.savefig('figures/svg/fig3_e_inset.svg', dpi=300, transparent=True)
-    plt.savefig('figures/pdf/fig3_e_inset.pdf', dpi=300, transparent=True)
+    plt.savefig('figures/fig3_e_inset.pdf', dpi=300, transparent=True)
     plt.close(fig)
 
     # =========================
@@ -187,8 +183,7 @@ def main():
 
         plot_scgf_cross(ax, data, V, num_sites_range, colors, colors_soft, marker_map, fit_indices=fit, a0=a0)
 
-        plt.savefig(f'figures/svg/{name}.svg', dpi=300, transparent=True)
-        plt.savefig(f'figures/pdf/{name}.pdf', dpi=300, transparent=True)
+        plt.savefig(f'figures/{name}.pdf', dpi=300, transparent=True)
         plt.close(fig)
 
         # ---- inset
@@ -200,8 +195,7 @@ def main():
 
         plot_inset(ax, x, y, sigma, num_sites_range, colors, colors_soft, marker_map)
 
-        plt.savefig(f'figures/svg/{name}_inset.svg', dpi=300, transparent=True)
-        plt.savefig(f'figures/pdf/{name}_inset.pdf', dpi=300, transparent=True)
+        plt.savefig(f'figures/{name}_inset.pdf', dpi=300, transparent=True)
         plt.close(fig)
 
 
