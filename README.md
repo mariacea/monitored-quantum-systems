@@ -65,6 +65,11 @@ python -m scripts.compute_activity --help
 python -m scripts.2d_sampling --help
 ```
 
+Example minimal run:
+
+```bash
+python -m src.main --num_sites 4 --V 5.6 --s 0.0 --max_bond_dim 5 --max_iterations 10 --base_dir test
+
 ---
 
 ## 📊 Reproducing figures
@@ -72,7 +77,7 @@ python -m scripts.2d_sampling --help
 Figures from the paper can be reproduced using the plotting scripts in `scripts/`:
 
 * Fig. 1 → `plot_phase_diagram.py`
-* Fig. 3 → `plot_SCGF.py` `plot_activity.py` `plot_rate_function.py` `plot_critical_s.py`
+* Fig. 3 → `plot_SCGF.py`, `plot_activity.py`, `plot_rate_function.py`, `plot_critical_s.py`
 * Fig. 4 → `plot_ensembles.py`
 * Fig. S2 → `plot_convergence.py`
 * Fig. S3 → `plot_critical_s.py`
@@ -107,7 +112,7 @@ If you use this code, please cite:
 ```
 @article{paper,
   title={Large deviations and conditioned monitored quantum systems: a tensor network approach},
-  author={Your Name},
+  author={María Cea, Marcel Cech, Federico Carollo, Igor Lesanovsky, and Mari Carmen Bañuls},
   year={2026}
 }
 ```
@@ -121,7 +126,7 @@ A frozen version of this repository is available on Zenodo:
 
 ---
 
-🔗 arXiv
+## 🔗 arXiv
 
 Preprint available at:
 (ADD LINK AFTER SUBMISSION)
