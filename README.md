@@ -122,7 +122,7 @@ If you use this code, please cite:
 ## 🔗 Zenodo archive
 
 A frozen version of this repository is available on Zenodo:
-(ADD LINK AFTER UPLOAD)
+[![DOI](https://zenodo.org/badge/1187282172.svg)](https://doi.org/10.5281/zenodo.19207104)
 
 ---
 
