@@ -102,8 +102,8 @@ def save_results(params, eigenvalues: List[float], mpdo: MPDO, message: str = ""
         f.write(f"[INFO] Total iterations this run: {num_iterations}\n")
         f.write(f"[INFO] ---------------------------------------------\n")
 
-# def load_results(params, loading_mpdo=False) -> Dict | None:
-def load_results(params, i, loading_mpdo=False) -> Dict | None:
+def load_results(params, loading_mpdo=False) -> Dict | None:
+# def load_results(params, i, loading_mpdo=False) -> Dict | None:
     """
     Checks if the results for specific 'num_sites', 'V', 's' and 'max_bond_dim' already exist and loads them if available.
 
@@ -113,8 +113,8 @@ def load_results(params, i, loading_mpdo=False) -> Dict | None:
     Returns:
         Dict | None: A dictionary with the loaded data if it exists, or None if not found.
     """
-    # dir = os.path.join(params.base_dir, f"num_sites_{params.num_sites}", f"V_{params.V:.3f}", f"s_{params.s:.3f}", f"max_bond_dim_{params.max_bond_dim}")
-    dir = os.path.join(params.base_dir, f"num_sites_{params.num_sites}", f"V_{params.V:.3f}", f"s_{params.s:.3f}", f"T_{i}",f"max_bond_dim_{params.max_bond_dim}")
+    dir = os.path.join(params.base_dir, f"num_sites_{params.num_sites}", f"V_{params.V:.3f}", f"s_{params.s:.3f}", f"max_bond_dim_{params.max_bond_dim}")
+    # dir = os.path.join(params.base_dir, f"num_sites_{params.num_sites}", f"V_{params.V:.3f}", f"s_{params.s:.3f}", f"T_{i}",f"max_bond_dim_{params.max_bond_dim}")
     metadata_path = os.path.join(dir, "metadata.json")
     # print(metadata_path)
     iteration_data_path = os.path.join(dir, "iteration_data.json")

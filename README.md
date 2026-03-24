@@ -51,9 +51,18 @@ pip install -r requirements.txt
 The main datasets used in the paper are generated using:
 
 ```bash
-python scripts/main.py
-python scripts/compute_activity.py
-python scripts/2d_sampling.py
+python -m scripts.main
+python -m scripts.compute_activity
+python -m scripts.2d_sampling
+```
+For advanced usage, the core simulation module can be run directly with custom parameters.
+
+To see all available options:
+
+```bash
+python -m src.main --help
+python -m scripts.compute_activity --help
+python -m scripts.2d_sampling --help
 ```
 
 ---
@@ -71,7 +80,7 @@ Figures from the paper can be reproduced using the plotting scripts in `scripts/
 Example:
 
 ```bash
-python scripts/plot_SCGF.py
+python -m scripts.plot_SCGF
 ```
 
 ---

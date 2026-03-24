@@ -38,7 +38,6 @@ pyzmq==27.1.0
 scipy==1.17.1
 setuptools==82.0.1
 six==1.17.0
--e git+https://github.com/mariacea/monitored-quantum-systems@b03c9d7a159fc141a670bae0d27358f79af94014#egg=src
 stack-data==0.6.3
 tensornetwork==0.4.6
 tornado==6.5.2
