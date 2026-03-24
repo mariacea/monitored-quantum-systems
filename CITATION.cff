@@ -15,7 +15,7 @@ authors:
    orcid: "https://orcid.org/0000-0001-9660-9467"
  - family-names: "Bañuls"
    given-names: "Mari Carmen"
-title: "Data and code for "Large deviations and conditioned monitored quantum systems: a tensor network approach""
+title: "Data and code for Large deviations and conditioned monitored quantum systems: a tensor network approach"
 version: v0.1.0
 doi: 10.5281/zenodo.19207105
 date-released: 2026-03-24
