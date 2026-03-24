@@ -4,7 +4,18 @@ authors:
  - family-names: "Cea Fernández"
    given-names: "María"
    orcid: "https://orcid.org/0009-0005-1946-0589"
-title: "monitored-quantum-systems"
+ - family-names: "Cech"
+   given-names: "Marcel"
+   orcid: "https://orcid.org/0000-0002-9381-6927"
+ - family-names: "Carollo"
+   given-names: "Federico"
+   orcid: "https://orcid.org/0000-0002-6961-7143"
+ - family-names: "Lesanovsky"
+   given-names: "Igor"
+   orcid: "https://orcid.org/0000-0001-9660-9467"
+ - family-names: "Bañuls"
+   given-names: "Mari Carmen"
+title: "Data and code for "Large deviations and conditioned monitored quantum systems: a tensor network approach""
 version: v0.1.0
 doi: 10.5281/zenodo.19207105
 date-released: 2026-03-24
